@@ -10,12 +10,12 @@ The framework incorporates design principles of POM (Page Object Model) which pr
 Tools & Libraries:
 ====================
 The test automation framework is comprised of the following tools & libraries:
-	1. Java 1.8 : Programming language.
-	2. Selenium WebDriver 3.141.59 : Web browser Automation library.
-	3. Apache POI : Dependency to read & write data to Excel sheets.
-	4. Extent Reports : Reporting module.
-	5. Eclipse : Integrated Development Environment.
-	6. Git : Version Control.
+1. Java 1.8 : Programming language.
+2. Selenium WebDriver 3.141.59 : Web browser Automation library.
+3. Apache POI : Dependency to read & write data to Excel sheets.
+4. Extent Reports : Reporting module.
+5. Eclipse : Integrated Development Environment.
+6. Git : Version Control.
 
 Developed & Maintained by:
 ============================
