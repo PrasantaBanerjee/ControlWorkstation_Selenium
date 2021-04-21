@@ -1,0 +1,3769 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/8644a9c/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>CWS Automation Report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>CWS Automation Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Dec 15, 2020 07:45:15 AM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='92.683%'><span class='strong'>38</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='7.317%'>3</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m6 l6 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='71.429%'><span class='strong'>5</span> step(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>1</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Excel File Load</span>
+						<span class='test-time'>Dec 15, 2020 07:45:46 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:45:46 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:45:55 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+337ms</span>
+</div>
+<div class='test-desc'>Validate Excel File Load options for Merrill Lynch, Bank Accrual & Rate file. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:45:52 AM</td>
+				<td class='step-details'>
+						Clicked on "Upload Merrill Lynch" button
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:45:52 AM</td>
+				<td class='step-details'>
+						Failed to upload file: An Error occured. Please check the attached file
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:45:54 AM</td>
+				<td class='step-details'>
+						Clicked on "Upload Bank Accrual" button
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:45:54 AM</td>
+				<td class='step-details'>
+						Failed to upload file: An Error occured. Please check the attached file
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:45:55 AM</td>
+				<td class='step-details'>
+						Clicked on "Upload Rate File" button
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:45:55 AM</td>
+				<td class='step-details'>
+						Failed to upload file: An Error occured. Please check the attached file
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Events</span>
+						<span class='test-time'>Dec 15, 2020 07:45:58 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:45:58 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:46:14 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+673ms</span>
+</div>
+<div class='test-desc'>Validate Add Events page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:05 AM</td>
+				<td class='step-details'>
+						Selected Portfolio as: Balanced
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:07 AM</td>
+				<td class='step-details'>
+						Selected Fund as: 536
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:09 AM</td>
+				<td class='step-details'>
+						Selected Fund as: 3378
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:11 AM</td>
+				<td class='step-details'>
+						Selected Process Type Values as: Equity
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:12 AM</td>
+				<td class='step-details'>
+						Entered Rate value: 15
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:13 AM</td>
+				<td class='step-details'>
+						Clicked on Submit button
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:46:14 AM</td>
+				<td class='step-details'>
+						Error message displayed as: No data exists to process a distribution for 12/15/2020
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:14 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Generate Daily Events</span>
+						<span class='test-time'>Dec 15, 2020 07:46:14 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:46:14 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:46:18 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+583ms</span>
+</div>
+<div class='test-desc'>Validate Generate Daily Events page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:16 AM</td>
+				<td class='step-details'>
+						Selected Year: 2020
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:17 AM</td>
+				<td class='step-details'>
+						Clicked on Generate button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:18 AM</td>
+				<td class='step-details'>
+						Message displayed as: Events have been generated.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:18 AM</td>
+				<td class='step-details'>
+						Clicked on Close button.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Letter Variables</span>
+						<span class='test-time'>Dec 15, 2020 07:46:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:46:18 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:46:29 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+983ms</span>
+</div>
+<div class='test-desc'>Validate Letter Variables page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:20 AM</td>
+				<td class='step-details'>
+						Selected 'Daily CFL To' value: CIT
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:20 AM</td>
+				<td class='step-details'>
+						Changed 'Equity CFL From' value: QA78
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:21 AM</td>
+				<td class='step-details'>
+						Changed 'Equity Div Control Manager' value: Automation224
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:23 AM</td>
+				<td class='step-details'>
+						Clicked on Submit button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:24 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:25 AM</td>
+				<td class='step-details'>
+						Selected 'Daily CFL To' value: BNY
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:26 AM</td>
+				<td class='step-details'>
+						Changed 'Equity CFL From' value: QA103
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:26 AM</td>
+				<td class='step-details'>
+						Changed 'Equity Div Control Manager' value: Automation222
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:28 AM</td>
+				<td class='step-details'>
+						Clicked on Submit button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:29 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Daily Accrual</span>
+						<span class='test-time'>Dec 15, 2020 07:46:30 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:46:30 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:46:58 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+443ms</span>
+</div>
+<div class='test-desc'>Validate Daily Accrual Report </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:34 AM</td>
+				<td class='step-details'>
+						Selected Portfolio: High Yield
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:38 AM</td>
+				<td class='step-details'>
+						Clicked on Submit button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:39 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:42 AM</td>
+				<td class='step-details'>
+						Clicked on Re-Calculate button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:43 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:46 AM</td>
+				<td class='step-details'>
+						Clicked on Show Adjustments button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:51 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:51 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Show Adjustments data
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:53 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:56 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:56 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Daily Accrual data
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:46:58 AM</td>
+				<td class='step-details'>
+						Clicked on Cancel button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Daily Breakage</span>
+						<span class='test-time'>Dec 15, 2020 07:46:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:46:59 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:47:14 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+938ms</span>
+</div>
+<div class='test-desc'>Validate Daily Breakage Report </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:03 AM</td>
+				<td class='step-details'>
+						Successfully generated Daily Breakage Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:14 AM</td>
+				<td class='step-details'>
+						Successfully downloaded the extract.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>History Daily Accrual</span>
+						<span class='test-time'>Dec 15, 2020 07:47:15 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:47:15 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:47:42 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+287ms</span>
+</div>
+<div class='test-desc'>Validate History Daily Accrual page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:21 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/06/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:25 AM</td>
+				<td class='step-details'>
+						Selected Portfolio: High Yield
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:31 AM</td>
+				<td class='step-details'>
+						Clicked on Show Adjustments button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:35 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:35 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Show Adjustments data
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:36 AM</td>
+				<td class='step-details'>
+						Clicked on Close button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:40 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:40 AM</td>
+				<td class='step-details'>
+						Successfully extracted the History Daily Accrual data
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:42 AM</td>
+				<td class='step-details'>
+						Clicked on Cancel button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>History Daily Breakage</span>
+						<span class='test-time'>Dec 15, 2020 07:47:42 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:47:42 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:48:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+65ms</span>
+</div>
+<div class='test-desc'>Validate History Daily Breakage page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:47:57 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:15 AM</td>
+				<td class='step-details'>
+						Clicked on Export button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:15 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>History Distribution QC</span>
+						<span class='test-time'>Dec 15, 2020 07:48:16 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:48:16 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:48:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+406ms</span>
+</div>
+<div class='test-desc'>Validate History Distribution QC page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:18 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:22 AM</td>
+				<td class='step-details'>
+						Selected Portfolio: org.openqa.selenium.support.ui.Select@f14e5bf
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:34 AM</td>
+				<td class='step-details'>
+						Clicked on Export button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:34 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>History Custody Funding Letter QC</span>
+						<span class='test-time'>Dec 15, 2020 07:48:35 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:48:35 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:48:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+401ms</span>
+</div>
+<div class='test-desc'>Validate History Custody Funding Letter QC page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:39 AM</td>
+				<td class='step-details'>
+						Selected Custodian: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:50 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>History Custody Funding Letter</span>
+						<span class='test-time'>Dec 15, 2020 07:48:50 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:48:50 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:49:06 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+131ms</span>
+</div>
+<div class='test-desc'>Validate History Custody Funding Letter page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:53 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:48:54 AM</td>
+				<td class='step-details'>
+						Selected Custodian: BNY
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:06 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>History Custody Funding Letter Summary</span>
+						<span class='test-time'>Dec 15, 2020 07:49:06 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:49:06 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:49:16 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+435ms</span>
+</div>
+<div class='test-desc'>Validate History Custody Funding Letter Summary page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:09 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:11 AM</td>
+				<td class='step-details'>
+						Selected Custodian: CIT
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:16 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>History Rate Notification</span>
+						<span class='test-time'>Dec 15, 2020 07:49:16 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:49:16 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:49:32 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+593ms</span>
+</div>
+<div class='test-desc'>Validate History Rate Notification page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:18 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:32 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>History Div-T</span>
+						<span class='test-time'>Dec 15, 2020 07:49:32 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:49:32 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:49:43 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+392ms</span>
+</div>
+<div class='test-desc'>Validate History Div-T page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:34 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:36 AM</td>
+				<td class='step-details'>
+						Selected DDA: 8900588179
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:42 AM</td>
+				<td class='step-details'>
+						Clicked on Export button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:42 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:43 AM</td>
+				<td class='step-details'>
+						Clicked on Cancel button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>History Money Movement</span>
+						<span class='test-time'>Dec 15, 2020 07:49:43 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:49:43 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:49:57 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+324ms</span>
+</div>
+<div class='test-desc'>Validate History Money Movement page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:45 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:57 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>History Dividend Letter</span>
+						<span class='test-time'>Dec 15, 2020 07:49:57 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:49:57 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:50:17 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+956ms</span>
+</div>
+<div class='test-desc'>Validate History Dividend Letter page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:49:59 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/09/30
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:02 AM</td>
+				<td class='step-details'>
+						Selected Custodian: CIT
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:04 AM</td>
+				<td class='step-details'>
+						Navigated to Last page of Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:07 AM</td>
+				<td class='step-details'>
+						Signature is available
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:17 AM</td>
+				<td class='step-details'>
+						Clicked on Export button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:17 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Cash Re-Invest Income</span>
+						<span class='test-time'>Dec 15, 2020 07:50:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:50:18 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:50:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+388ms</span>
+</div>
+<div class='test-desc'>Validate Equity Cash Re-Invest Income page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:22 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:34 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Cash Re-Invest Cap Gain</span>
+						<span class='test-time'>Dec 15, 2020 07:50:35 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:50:35 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:50:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+321ms</span>
+</div>
+<div class='test-desc'>Validate Equity Cash Re-Invest Cap Gain page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:37 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:39 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:50 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Record Date Shares</span>
+						<span class='test-time'>Dec 15, 2020 07:50:50 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:50:50 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:51:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+506ms</span>
+</div>
+<div class='test-desc'>Validate Equity Record Date Shares page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:53 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:50:55 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:05 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Distribution QC</span>
+						<span class='test-time'>Dec 15, 2020 07:51:05 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:51:05 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:51:23 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+981ms</span>
+</div>
+<div class='test-desc'>Validate Equity Distribution QC page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:07 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:11 AM</td>
+				<td class='step-details'>
+						Selected Portfolio as: Multimanager Lifestyle Conservative Port
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:13 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:23 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Rate Notification</span>
+						<span class='test-time'>Dec 15, 2020 07:51:24 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:51:24 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:51:39 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+542ms</span>
+</div>
+<div class='test-desc'>Validate Equity Rate Notification page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:26 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:29 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:39 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Custody Funding Letter QC</span>
+						<span class='test-time'>Dec 15, 2020 07:51:40 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:51:40 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:52:07 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+196ms</span>
+</div>
+<div class='test-desc'>Validate Custody Funding Letter QC page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:44 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:47 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:51 AM</td>
+				<td class='step-details'>
+						Selected Portfolio as: Multi-Index Lifestyle Moderate Portfolio
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:58 AM</td>
+				<td class='step-details'>
+						Clicked Record Date QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:51:58 AM</td>
+				<td class='step-details'>
+						Report successfully displayed for Record Date QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:00 AM</td>
+				<td class='step-details'>
+						Clicked Total Dividend QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:00 AM</td>
+				<td class='step-details'>
+						Report successfully displayed for Total Dividend QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:03 AM</td>
+				<td class='step-details'>
+						Clicked Total Reinvestment QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:03 AM</td>
+				<td class='step-details'>
+						Report successfully displayed for Total Reinvestment QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:05 AM</td>
+				<td class='step-details'>
+						Clicked Cash QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:05 AM</td>
+				<td class='step-details'>
+						Report successfully displayed for Cash QC
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:07 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Custody Funding Letter</span>
+						<span class='test-time'>Dec 15, 2020 07:52:07 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:52:07 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:52:23 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+304ms</span>
+</div>
+<div class='test-desc'>Validate Custody Funding Letter page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:10 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:12 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:23 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Record Date Shares Comparison</span>
+						<span class='test-time'>Dec 15, 2020 07:52:23 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:52:23 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:52:41 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+263ms</span>
+</div>
+<div class='test-desc'>Validate Equity Record Date Shares Comparison page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:28 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:30 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:41 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Custody Funding Letter Summary</span>
+						<span class='test-time'>Dec 15, 2020 07:52:41 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:52:41 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:52:48 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+366ms</span>
+</div>
+<div class='test-desc'>Validate Custody Funding Letter Summary page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:43 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:45 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:48 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Div-T</span>
+						<span class='test-time'>Dec 15, 2020 07:52:48 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:52:48 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:52:59 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+146ms</span>
+</div>
+<div class='test-desc'>Validate Equity Div-T page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:50 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:52 AM</td>
+				<td class='step-details'>
+						Selected DDA as: 8900588187
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:54 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:57 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:52:59 AM</td>
+				<td class='step-details'>
+						Clicked on Cancel button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Money Movement</span>
+						<span class='test-time'>Dec 15, 2020 07:52:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:52:59 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:53:12 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+602ms</span>
+</div>
+<div class='test-desc'>Validate Equity Money Movement page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:01 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:02 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:12 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Equity Dividend Letter</span>
+						<span class='test-time'>Dec 15, 2020 07:53:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:53:13 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:53:31 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+980ms</span>
+</div>
+<div class='test-desc'>Validate Equity Dividend Letter page </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:15 AM</td>
+				<td class='step-details'>
+						Selected Date as: 2020/09/29
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:16 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:20 AM</td>
+				<td class='step-details'>
+						Signature is available
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:31 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Halfpenny Daily NAV Breakage</span>
+						<span class='test-time'>Dec 15, 2020 07:53:33 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:53:33 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:53:54 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+599ms</span>
+</div>
+<div class='test-desc'>Validate Daily NAV Breakage Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:40 AM</td>
+				<td class='step-details'>
+						Clicked on Daily NAV Breakage tab.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:44 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:54 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:54 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Halfpenny Daily NAV Breakage History</span>
+						<span class='test-time'>Dec 15, 2020 07:53:54 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:53:54 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:54:13 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+128ms</span>
+</div>
+<div class='test-desc'>Validate Daily NAV Breakage History Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:53:59 AM</td>
+				<td class='step-details'>
+						Clicked on Daily NAV Breakage History tab.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:03 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:13 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:13 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>Details History</span>
+						<span class='test-time'>Dec 15, 2020 07:54:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:54:13 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:54:28 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+63ms</span>
+</div>
+<div class='test-desc'>Validate Details History Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:22 AM</td>
+				<td class='step-details'>
+						Clicked on Details History tab.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:22 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:28 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:28 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>NAV Breakage Query</span>
+						<span class='test-time'>Dec 15, 2020 07:54:33 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:54:33 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:54:53 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+706ms</span>
+</div>
+<div class='test-desc'>Validate NAV Breakage Query Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:38 AM</td>
+				<td class='step-details'>
+						Selected From Date: 01/09/2018
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:43 AM</td>
+				<td class='step-details'>
+						Selected Adjustment type: CIT
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:51 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:53 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:53 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>Halfpenny Adjustment Query</span>
+						<span class='test-time'>Dec 15, 2020 07:54:53 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:54:53 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:55:17 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+475ms</span>
+</div>
+<div class='test-desc'>Validate Halfpenny Adjustment Query Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:54:58 AM</td>
+				<td class='step-details'>
+						Selected Adjustment type: Daily Breakage Adj
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:07 AM</td>
+				<td class='step-details'>
+						Selected From-Date: 01/09/2018
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:12 AM</td>
+				<td class='step-details'>
+						Clicked on Show Adjustments button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:17 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:17 AM</td>
+				<td class='step-details'>
+						Successfully downloaded the extract.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>Payouts</span>
+						<span class='test-time'>Dec 15, 2020 07:55:19 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:55:19 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:55:38 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+221ms</span>
+</div>
+<div class='test-desc'>Validate Payouts Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:23 AM</td>
+				<td class='step-details'>
+						Selected Year: 2020
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:25 AM</td>
+				<td class='step-details'>
+						Selected Month: 01
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:25 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:38 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:38 AM</td>
+				<td class='step-details'>
+						Successfully downlaoded the extract.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>Comparison</span>
+						<span class='test-time'>Dec 15, 2020 07:55:39 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:55:39 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:55:47 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+168ms</span>
+</div>
+<div class='test-desc'>Validate Comparison Report Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:43 AM</td>
+				<td class='step-details'>
+						Selected Report Type: Estimate.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:44 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:47 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:47 AM</td>
+				<td class='step-details'>
+						Successfully exported the Extract.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Fee Types</span>
+						<span class='test-time'>Dec 15, 2020 07:55:48 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:55:48 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:56:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+110ms</span>
+</div>
+<div class='test-desc'>Validate Fee Types Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:55 AM</td>
+				<td class='step-details'>
+						Clicked on Export to Excel.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:55 AM</td>
+				<td class='step-details'>
+						Successfully downloaded the extract.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:55:58 AM</td>
+				<td class='step-details'>
+						Entered new Fee Type value: Rmzw
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:03 AM</td>
+				<td class='step-details'>
+						Selected status from dropdown: Active
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:05 AM</td>
+				<td class='step-details'>
+						Successfully added new Fee Type.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>BPS</span>
+						<span class='test-time'>Dec 15, 2020 07:56:12 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:56:12 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:56:39 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+690ms</span>
+</div>
+<div class='test-desc'>Validate BPS Page. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:21 AM</td>
+				<td class='step-details'>
+						Clicked on Export button.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:22 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:27 AM</td>
+				<td class='step-details'>
+						Selected Fund Name from dropdown.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:32 AM</td>
+				<td class='step-details'>
+						Selected Fee Payout relation from dropdown.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:38 AM</td>
+				<td class='step-details'>
+						Entered value for BPS: 10
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:56:39 AM</td>
+				<td class='step-details'>
+						Successfully added new BPS for selected Fee Payout relation.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>Audit Report</span>
+						<span class='test-time'>Dec 15, 2020 07:56:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:56:59 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:57:11 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+281ms</span>
+</div>
+<div class='test-desc'>Validate Audit Report. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:06 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/10/21
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:06 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:11 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>File Status Report</span>
+						<span class='test-time'>Dec 15, 2020 07:57:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:57:13 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:57:20 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+62ms</span>
+</div>
+<div class='test-desc'>Validate File Status Report. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:16 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/10/21
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:17 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:20 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>Process Status Report</span>
+						<span class='test-time'>Dec 15, 2020 07:57:22 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:57:22 AM</span>
+	<span class='label end-time'>Dec 15, 2020 07:57:29 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+811ms</span>
+</div>
+<div class='test-desc'>Validate Process Status Report. </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:25 AM</td>
+				<td class='step-details'>
+						Selected Date: 2020/10/21
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:26 AM</td>
+				<td class='step-details'>
+						Successfully generated the Report.
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:57:29 AM</td>
+				<td class='step-details'>
+						Successfully extracted the Report.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>Query Date Ranges</span>
+						<span class='test-time'>Dec 15, 2020 07:57:35 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 15, 2020 07:57:35 AM</span>
+	<span class='label end-time'>Dec 15, 2020 08:01:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 33s+356ms</span>
+</div>
+<div class='test-desc'>Validate all the Reports with different date ranges & trust combinations. </div>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+	<li class='node level-1 leaf warning' status='warning' test-id='42'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Outstanding Shares Report</div>
+			<span class='node-time'>Dec 15, 2020 07:57:35 AM</span>
+			&middot; <span class='node-duration'>0h 0m 10s+981ms</span>
+			<span class='test-status right warning'>warning</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Outstanding Shares Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:35 AM</td>
+							<td class='step-details'>
+									From-Date: 11/25/2019
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:35 AM</td>
+							<td class='step-details'>
+									To-Date: 11/25/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:41 AM</td>
+							<td class='step-details'>
+									Report shows 5 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:41 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:42 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:42 AM</td>
+							<td class='step-details'>
+									CUSIP
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:42 AM</td>
+							<td class='step-details'>
+									Total Outstanding Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:42 AM</td>
+							<td class='step-details'>
+									Total Open Accounts
+								
+							</td>
+						</tr>
+						<tr class='log' status='warning'>
+							<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+							<td class='timestamp'>7:57:42 AM</td>
+							<td class='step-details'>
+									No Records Found for the specified date range.
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:46 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='43'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Dividend Information Report</div>
+			<span class='node-time'>Dec 15, 2020 07:57:46 AM</span>
+			&middot; <span class='node-duration'>0h 0m 17s+873ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Dividend Information Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:46 AM</td>
+							<td class='step-details'>
+									From-Date: 10/1/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:46 AM</td>
+							<td class='step-details'>
+									To-Date: 11/25/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:55 AM</td>
+							<td class='step-details'>
+									Report shows 13 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:55 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:55 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:55 AM</td>
+							<td class='step-details'>
+									Distribution Type
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Record Date
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Ex-Date
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Reinvestment Date
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Payable Date
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Close Outs
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Cash Distribution
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Rate
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Reinvestment Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Reinvestment Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Total Distribution
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:57:56 AM</td>
+							<td class='step-details'>
+									Total Records found: 75
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:04 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='44'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Share And Dollar Activity Report</div>
+			<span class='node-time'>Dec 15, 2020 07:58:05 AM</span>
+			&middot; <span class='node-duration'>0h 0m 55s+215ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Share And Dollar Activity Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:05 AM</td>
+							<td class='step-details'>
+									From-Date: 11/25/2019
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:05 AM</td>
+							<td class='step-details'>
+									To-Date: 11/25/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:08 AM</td>
+							<td class='step-details'>
+									Value selected from Trust dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:09 AM</td>
+							<td class='step-details'>
+									Value selected from Custodian dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:14 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Portfolio dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:14 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Name dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:29 AM</td>
+							<td class='step-details'>
+									Report shows 12 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:29 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:29 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									11/25/2019 Outstanding Beginning Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Purchase Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Purchase Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Reinvestment Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Reinvestment Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									+/- Distribution Adjustments Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									+/- Distribution Adjustments Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Redemption Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Redemption Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									12/14/2020 Outstanding Ending Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:58:30 AM</td>
+							<td class='step-details'>
+									Total Records found: 426
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:00 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='45'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Dev Fund Activity Report</div>
+			<span class='node-time'>Dec 15, 2020 07:59:01 AM</span>
+			&middot; <span class='node-duration'>0h 0m 32s+161ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Dev Fund Activity Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:01 AM</td>
+							<td class='step-details'>
+									From-Date: 11/25/2019
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:01 AM</td>
+							<td class='step-details'>
+									To-Date: 11/25/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:04 AM</td>
+							<td class='step-details'>
+									Value selected from Trust dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:05 AM</td>
+							<td class='step-details'>
+									Value selected from Custodian dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:07 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Portfolio dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:08 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Name dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:20 AM</td>
+							<td class='step-details'>
+									Report shows 12 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:20 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:20 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:20 AM</td>
+							<td class='step-details'>
+									11/25/2019 Outstanding Beginning Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Purchase Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Purchase Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Reinvestment Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Reinvestment Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									+/- Distribution Adjustments Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									+/- Distribution Adjustments Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Redemption Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Redemption Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									12/14/2020 Outstanding Ending Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:21 AM</td>
+							<td class='step-details'>
+									Total Records found: 2
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:33 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='46'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Payable And Receivable Report</div>
+			<span class='node-time'>Dec 15, 2020 07:59:34 AM</span>
+			&middot; <span class='node-duration'>0h 0m 25s+745ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Payable And Receivable Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:34 AM</td>
+							<td class='step-details'>
+									From-Date: 11/27/2019
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:34 AM</td>
+							<td class='step-details'>
+									To-Date: 12/2/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									Report shows 4 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									Payable
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									Receivable
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:41 AM</td>
+							<td class='step-details'>
+									Total Records found: 423
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>7:59:59 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf pass' status='pass' test-id='47'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Activity After FYE Report</div>
+			<span class='node-time'>Dec 15, 2020 08:00:00 AM</span>
+			&middot; <span class='node-duration'>0h 0m 24s+955ms</span>
+			<span class='test-status right pass'>pass</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Activity After FYE Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:00 AM</td>
+							<td class='step-details'>
+									From-Date: 11/25/2019
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:00 AM</td>
+							<td class='step-details'>
+									To-Date: 12/2/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:07 AM</td>
+							<td class='step-details'>
+									Report shows 4 column/s.
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>8:00:07 AM</td>
+							<td class='step-details'>
+									DST Fund #
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>8:00:07 AM</td>
+							<td class='step-details'>
+									Fund Name
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>8:00:07 AM</td>
+							<td class='step-details'>
+									Net Shares
+								
+							</td>
+						</tr>
+						<tr class='log' status='info'>
+							<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+							<td class='timestamp'>8:00:08 AM</td>
+							<td class='step-details'>
+									Net Dollars
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:08 AM</td>
+							<td class='step-details'>
+									Total Records found: 423
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:25 AM</td>
+							<td class='step-details'>
+									Successfully extracted the Report.
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li class='node level-1 leaf fail' status='fail' test-id='48'>
+		<div class='collapsible-header'>
+			<div class='node-name'>Capstock Cash Report</div>
+			<span class='node-time'>Dec 15, 2020 08:00:26 AM</span>
+			&middot; <span class='node-duration'>0h 0m 42s+296ms</span>
+			<span class='test-status right fail'>fail</span>
+		</div>
+		<div class='collapsible-body'>
+			<div class='node-desc'>Validate Capstock Cash Report</div>
+			<div class='node-steps'>
+				<table class='bordered table-results'>
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Timestamp</th>
+							<th>Details</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:26 AM</td>
+							<td class='step-details'>
+									From-Date: 1/2/2015
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:26 AM</td>
+							<td class='step-details'>
+									To-Date: 12/2/2020
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:29 AM</td>
+							<td class='step-details'>
+									Value selected from Trust dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:30 AM</td>
+							<td class='step-details'>
+									Value selected from Custodian dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:33 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Portfolio dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='pass'>
+							<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+							<td class='timestamp'>8:00:33 AM</td>
+							<td class='step-details'>
+									Value selected from Fund Name dropdown: All
+								
+							</td>
+						</tr>
+						<tr class='log' status='fail'>
+							<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+							<td class='timestamp'>8:01:08 AM</td>
+							<td class='step-details'>
+									Failed to generate Report: Error Encountered
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>41</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>7</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Dec 15, 2020 07:45:15 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Dec 15, 2020 08:01:11 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 15m 55s+222ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Chrome</td>
+							</tr>
+							<tr>
+								<td>Region</td>
+								<td>MOD</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 41,
+				passParent: 38,
+				failParent: 3,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 3,
+				childCount: 7,
+				passChild: 5,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 1,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 2,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Excel File Load":9.337,"Add Events":16.673,"Generate Daily Events":3.583,"Letter Variables":10.983,"Daily Accrual":28.443,"Daily Breakage":14.938,"History Daily Accrual":27.287,"History Daily Breakage":33.065,"History Distribution QC":18.406,"History Custody Funding Letter QC":15.401,"History Custody Funding Letter":15.131,"History Custody Funding Letter Summary":9.435,"History Rate Notification":15.593,"History Div-T":11.392,"History Money Movement":13.324,"History Dividend Letter":19.956,"Equity Cash Re-Invest Income":16.388,"Equity Cash Re-Invest Cap Gain":15.321,"Equity Record Date Shares":14.506,"Equity Distribution QC":17.981,"Equity Rate Notification":15.542,"Equity Custody Funding Letter QC":27.196,"Equity Custody Funding Letter":15.304,"Equity Record Date Shares Comparison":17.263,"Equity Custody Funding Letter Summary":7.366,"Equity Div-T":10.146,"Equity Money Movement":13.602,"Equity Dividend Letter":17.98,"Halfpenny Daily NAV Breakage":21.599,"Halfpenny Daily NAV Breakage History":18.128,"Details History":15.063,"NAV Breakage Query":19.706,"Halfpenny Adjustment Query":24.475,"Payouts":19.221,"Comparison":8.168,"Fee Types":17.11,"BPS":27.69,"Audit Report":12.281,"File Status Report":7.062,"Process Status Report":6.811,"Query Date Ranges":213.356
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/c23457b/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
